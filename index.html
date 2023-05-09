@@ -7,57 +7,60 @@
   <body>
     <div id="wrapper">
       <div id="title">
-        <title>Dice Throwing Game</title>
-        <h1>Roll The Dice</h1>
+        <title>Craps</title>
+        <h1>Craps</h1>
       </div>
       <div id="playerMenu">
         <div class="player">
-          <form>
+          <form autocomplete="off">
             <h2>Player 1</h2>
-            <label for="name"
-              >Username <span style="color: #ff0000">*</span></label
-            ><br />
+            <label for="name">Username</label><br />
             <input
               type="text"
-              id="name"
+              class="name"
               placeholder="Player 1"
               maxlength="22"
               required
             />
-            <br /><br />
+            <button class="selectUsername">Set username</button>
           </form>
         </div>
         <div class="player">
-          <form>
+          <form autocomplete="off">
             <h2>Player 2</h2>
-            <label for="name"
-              >Username <span style="color: #ff0000">*</span></label
-            ><br />
+            <label for="name">Username</label><br />
             <input
               type="text"
-              id="name"
+              class="name"
               placeholder="Player 2"
               maxlength="22"
               required
             />
-            <br /><br />
+            <button class="selectUsername">Set username</button>
           </form>
         </div>
         <div class="player">
-          <form>
+          <form autocomplete="off">
             <h2>Player 3</h2>
-            <label for="name"
-              >Username <span style="color: #ff0000">*</span></label
-            ><br />
+            <label for="name">Username</label><br />
             <input
               type="text"
-              id="name"
+              class="name"
               placeholder="Player 3"
               maxlength="22"
               required
             />
-            <br /><br />
+            <button class="selectUsername">Set username</button>
           </form>
+        </div>
+      </div>
+      <div id="bottomRow">
+        <div id="nmbOfGames">
+          Number of games
+          <input type="number" id="number" min="1" max="7" value="1" />
+        </div>
+        <div id="submitBtn">
+          <input type="submit" />
         </div>
       </div>
       <!-- to je comment btw!!-->

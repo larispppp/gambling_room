@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="title">
+        <title>Dice Throwing Game</title>
+        <h1>Roll The Dice</h1>
+      </div>
+      <div id="playerMenu">
+        <div class="player">
+          <form>
+            <h2>Player 1</h2>
+            <label for="name"
+              >Username <span style="color: #ff0000">*</span></label
+            ><br />
+            <input
+              type="text"
+              id="name"
+              placeholder="Player 1"
+              maxlength="22"
+              required
+            />
+            <br /><br />
+          </form>
+        </div>
+        <div class="player">
+          <form>
+            <h2>Player 2</h2>
+            <label for="name"
+              >Username <span style="color: #ff0000">*</span></label
+            ><br />
+            <input
+              type="text"
+              id="name"
+              placeholder="Player 2"
+              maxlength="22"
+              required
+            />
+            <br /><br />
+          </form>
+        </div>
+        <div class="player">
+          <form>
+            <h2>Player 3</h2>
+            <label for="name"
+              >Username <span style="color: #ff0000">*</span></label
+            ><br />
+            <input
+              type="text"
+              id="name"
+              placeholder="Player 3"
+              maxlength="22"
+              required
+            />
+            <br /><br />
+          </form>
+        </div>
+      </div>
+      <!-- to je comment btw!!-->
+      <!--<?php
+            session_start();
+            $username = "johndoe";
+            $_SESSION["username"] = $username;
+            ?>
+
+        <?php
+        $username = $_SESSION["username"];
+        echo "Welcome, " . $username;
+        ?>  -->
+    </div>
+  </body>
+</html>

@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
 }
+form {
+  width: 100%;
+}
 #wrapper {
   background-color: #848484;
   border-radius: 5px;
@@ -24,20 +27,45 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
 }
 #title {
+  width: 96%;
+  max-height: 5em;
   text-align: center;
-  font-size: 40px;
+  font-size: 38px;
   color: #000000;
+}
+#info-rules {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #80008075;
+  color: #fefefe;
+  max-width: 50px;
+  max-height: 50px;
+  height: 78%;
+  width: 78%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#info-rules:hover {
+  background-color: #7201728d;
+  transition: all 0.2s ease-in-out;
+}
+#info-rules:focus {
+  background-color: #5200528d;
 }
 #playerMenu {
   display: flex;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-  max-width: 800px;
   margin-bottom: 20px;
 }
 .player {
@@ -46,13 +74,14 @@ body {
   margin: 0 10px;
   border-radius: 5px;
   position: relative;
-  max-width: 220px;
+  max-width: 240px;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
 }
 .player input {
@@ -65,26 +94,11 @@ body {
   max-width: 200px;
   text-align: center;
 }
-.player button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #0a0a0a;
-  color: #fefefe;
-  width: 78%;
-  max-width: 200px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.player button:hover {
-  background-color: #dfdfdf;
-  color: #2a2a2a;
-}
-.player button:hover {
-  background-color: #e2e2e2;
-}
 input:focus {
   outline: none;
+}
+input:focus::placeholder {
+  color: transparent;
 }
 #bottomRow {
   width: 100%;
@@ -96,7 +110,7 @@ input:focus {
 #nmbOfGames {
   font-size: 16px;
   background-color: #80008075;
-  padding: 10px;
+  padding: 5px 20px 5px 20px;
   border-radius: 5px;
   position: relative;
   min-width: 200px;
@@ -104,20 +118,29 @@ input:focus {
   justify-content: left;
   align-items: center;
   text-align: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
   margin-bottom: 2%;
   margin-left: 15px;
 }
 #number {
-  margin-left: 2.126em;
   padding: 10px;
+  margin-left: 32px;
   border-radius: 5px;
   border: none;
   background-color: #f1f1f1;
-  width: 12%;
-  max-width: 200px;
+  max-width: 50px;
   text-align: center;
+}
+
+#number::-webkit-outer-spin-button,
+#number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+#number {
+  -moz-appearance: textfield;
 }
 #submitBtn input {
   font-size: 16px;
@@ -126,7 +149,7 @@ input:focus {
   border-radius: 5px;
   position: relative;
   min-width: 240px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
   margin-bottom: 2%;
   border: none;

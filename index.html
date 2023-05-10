@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <title>Craps</title>
   </head>
-
   <body>
     <div id="wrapper">
       <div id="title">
-        <title>Craps</title>
         <h1>Craps</h1>
+        <button id="info-rules">
+          <img src="assets/info_black_24dp.svg" alt="info" />
+        </button>
       </div>
-      <div id="playerMenu">
-        <div class="player">
-          <form autocomplete="off">
+      <form autocomplete="off">
+        <div id="playerMenu">
+          <div class="player">
             <h2>Player 1</h2>
             <label for="name">Username</label><br />
             <input
               type="text"
               class="name"
               placeholder="Player 1"
-              maxlength="22"
+              maxlength="15"
               required
             />
-            <button class="selectUsername">Set username</button>
-          </form>
-        </div>
-        <div class="player">
-          <form autocomplete="off">
+          </div>
+          <div class="player">
             <h2>Player 2</h2>
             <label for="name">Username</label><br />
             <input
               type="text"
               class="name"
               placeholder="Player 2"
-              maxlength="22"
+              maxlength="15"
               required
             />
-            <button class="selectUsername">Set username</button>
-          </form>
-        </div>
-        <div class="player">
-          <form autocomplete="off">
+          </div>
+          <div class="player">
             <h2>Player 3</h2>
             <label for="name">Username</label><br />
             <input
               type="text"
               class="name"
               placeholder="Player 3"
-              maxlength="22"
+              maxlength="15"
               required
             />
-            <button class="selectUsername">Set username</button>
-          </form>
+          </div>
         </div>
-      </div>
-      <div id="bottomRow">
-        <div id="nmbOfGames">
-          Number of games
-          <input type="number" id="number" min="1" max="7" value="1" />
+        <div id="bottomRow">
+          <div id="nmbOfGames">
+            Number of games
+            <input type="number" id="number" min="1" max="7" />
+          </div>
+          <div id="submitBtn">
+            <input type="submit" placeholder="Submit" />
+          </div>
         </div>
-        <div id="submitBtn">
-          <input type="submit" />
-        </div>
-      </div>
+      </form>
       <!-- to je comment btw!!-->
       <!--<?php
             session_start();

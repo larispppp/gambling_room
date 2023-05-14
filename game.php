@@ -20,6 +20,7 @@ $maxBet = $nOfDice * 6;
 
 <body>
   <div id="wrapper">
+
     <div id="diceBoard">
       <?php
       switch ($nOfDice) {
@@ -47,6 +48,7 @@ $maxBet = $nOfDice * 6;
           <input type="number" id="bet1" class="number" name="bet1" value="1" min="1" max="<?php echo $maxBet ?>" required />
         </div>
         <button class="lockIn" id="button1" onclick="check(1)">Lock In</button>
+        <span class="won">Won Bets: <span id="nowg1">0</span></span>
       </div>
       <div class=" playerBox">
         <?php
@@ -56,6 +58,7 @@ $maxBet = $nOfDice * 6;
           <input type="number" id="bet2" class="number" name="bet2" value="1" min="1" max="<?php echo $maxBet ?>" required />
         </div>
         <button class="lockIn" id="button2" onclick="check(2)">Lock In</button>
+        <span class="won">Won Bets: <span id="nowg2">0</span></span>
       </div>
       <div class="playerBox">
         <?php
@@ -65,16 +68,38 @@ $maxBet = $nOfDice * 6;
           <input type="number" id="bet3" class="number" name="bet3" value="1" min="1" max="<?php echo $maxBet ?>" required />
         </div>
         <button class="lockIn" id="button3" onclick="check(3)">Lock In</button>
+        <span class="won">Won Bets: <span id="nowg3">0</span></span>
+
       </div>
-      <br></br>
+
     </div>
-    <button id="rollButton" onclick="diceRoll()">Roll The Dice</button>
+    <div id="bottom">
+      <button id="rollButton" onclick="diceRoll()">Roll The Dice</button>
+      <button id="reroll" onclick="init()">Reroll The Dice</button>
+      <button id="lead" onclick="leaderboards()">Leaderboards</button>
+    </div>
+  </div>
+  <div id="leaderboard">
+    <div id="third">
+      <div id=rdName>Hello </div>
+    </div>
+    <div id="first">
+      <div id=stName>asdasd</div>
+    </div>
+    <div id="second">
+      <div id=ndName>asdasddasdasd</div>
+    </div>
   </div>
   <script>
     const maxBet = <?php echo json_encode($maxBet); ?>;
     const nOfDice = <?php echo json_encode($nOfDice); ?>;
+    const nOfGames = <?php echo json_encode($nOfGames); ?>;
+    const player1 = <?php echo json_encode($_SESSION['username1']); ?>;
+    const player2 = <?php echo json_encode($_SESSION['username2']); ?>;
+    const player3 = <?php echo json_encode($_SESSION['username3']); ?>;
   </script>
   <script src="main.js"></script>
+
 </body>
 
 </html>

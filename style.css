@@ -2,6 +2,7 @@
 * {
   font-family: "Work Sans", sans-serif;
   user-select: none;
+  color: #1b1b1b;
 }
 body {
   background-image: url(assets/dice-32.png);
@@ -41,7 +42,7 @@ form {
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 10px;
+  padding: 9px 10px 6px 10px;
   border-radius: 5px;
   border: none;
   background-color: #80008075;
@@ -108,9 +109,8 @@ input:focus::placeholder {
   text-align: center;
 }
 #nmbOfGames {
-  font-size: 16px;
   background-color: #80008075;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 10px 5px 20px;
   border-radius: 5px;
   position: relative;
   min-width: 200px;
@@ -123,7 +123,22 @@ input:focus::placeholder {
   margin-bottom: 2%;
   margin-left: 15px;
 }
-#number {
+#nmbOfDice {
+  background-color: #80008075;
+  padding: 5px 10px 5px 20px;
+  border-radius: 5px;
+  position: relative;
+  min-width: 210px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2%;
+  gap: 18px;
+}
+.number {
   padding: 10px;
   margin-left: 32px;
   border-radius: 5px;
@@ -133,19 +148,19 @@ input:focus::placeholder {
   text-align: center;
 }
 
-#number::-webkit-outer-spin-button,
-#number::-webkit-inner-spin-button {
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
-#number {
+.number {
   -moz-appearance: textfield;
 }
 #submitBtn input {
   font-size: 16px;
   background-color: #80008075;
-  padding: 10px;
+  padding: 13px;
   border-radius: 5px;
   position: relative;
   min-width: 240px;
@@ -167,4 +182,95 @@ input:focus::placeholder {
 
 #submitBtn {
   margin-right: 15px;
+}
+
+/*this was all index, from here it's game.php*/
+
+#gameBoard {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#diceBoard {
+  height: fit-content;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+#diceBoard img {
+  background-color: #fefefe;
+  border-radius: 21%;
+}
+.playerBox {
+  overflow: hidden;
+  background-color: #80008076;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  position: relative;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+.diceSum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 90%;
+  border-top: 1px solid #1b1b1b;
+}
+.lockIn {
+  font-size: 16px;
+  background-color: #848484;
+  padding: 13px;
+  border-radius: 5px;
+  position: relative;
+  width: 90%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2%;
+  border: none;
+  cursor: pointer;
+}
+.lockIn:hover {
+  background-color: #727272;
+  transition: all 0.2s ease-in-out;
+}
+.lockIn:focus {
+  background-color: #6a6a6a;
+  transition: all 0.2s ease-in-out;
+}
+#rollButton {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: #80008075;
+  padding: 13px;
+  border-radius: 5px;
+  position: relative;
+  width: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2%;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+#rollButton:hover {
+  background-color: #7201728d;
+  transition: all 0.2s ease-in-out;
+}
+#rollButton:focus {
+  background-color: #5200528d;
+  transition: all 0.2s ease-in-out;
 }

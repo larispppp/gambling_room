@@ -3,9 +3,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
     <title>Craps</title>
   </head>
+
   <body>
     <div id="wrapper">
       <div id="title">
@@ -14,7 +16,7 @@
           <img src="assets/info_black_24dp.svg" alt="info" />
         </button>
       </div>
-      <form autocomplete="off">
+      <form action="game.php" method="post" autocomplete="off">
         <div id="playerMenu">
           <div class="player">
             <h2>Player 1</h2>
@@ -22,6 +24,7 @@
             <input
               type="text"
               class="name"
+              name="u1"
               placeholder="Player 1"
               maxlength="15"
               required
@@ -33,6 +36,7 @@
             <input
               type="text"
               class="name"
+              name="u2"
               placeholder="Player 2"
               maxlength="15"
               required
@@ -44,6 +48,7 @@
             <input
               type="text"
               class="name"
+              name="u3"
               placeholder="Player 3"
               maxlength="15"
               required
@@ -53,24 +58,33 @@
         <div id="bottomRow">
           <div id="nmbOfGames">
             Number of games
-            <input type="number" id="number" min="1" max="7" />
+            <input
+              type="number"
+              class="number"
+              name="nOg"
+              value="1"
+              min="1"
+              max="7"
+              required
+            />
+          </div>
+          <div id="nmbOfDice">
+            Number of dice
+            <input
+              type="number"
+              class="number"
+              name="nOd"
+              value="1"
+              min="1"
+              max="3"
+              required
+            />
           </div>
           <div id="submitBtn">
             <input type="submit" placeholder="Submit" />
           </div>
         </div>
       </form>
-      <!-- to je comment btw!!-->
-      <!--<?php
-            session_start();
-            $username = "johndoe";
-            $_SESSION["username"] = $username;
-            ?>
-
-        <?php
-        $username = $_SESSION["username"];
-        echo "Welcome, " . $username;
-        ?>  -->
     </div>
   </body>
 </html>

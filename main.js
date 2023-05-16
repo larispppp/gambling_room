@@ -33,7 +33,7 @@ function check(x) {
       button.style.backgroundColor = "#6a6a6a";
     }
   } else {
-    Swal.fire("The Internet?", "That thing is still around?", "question");
+    Swal.fire("Error", "You entered a number, higher than the possible dice sum!", "question");
   }
 }
 function displayButton() {

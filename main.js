@@ -9,12 +9,6 @@ let gameWinners = [];
 let reroll = document.getElementById("reroll");
 let lead = document.getElementById("lead");
 let leaderboard = document.getElementById("leaderboard");
-let first = document.getElementById("first");
-let second = document.getElementById("second");
-let third = document.getElementById("third");
-let st = document.getElementById("stName");
-let nd = document.getElementById("ndName");
-let rd = document.getElementById("rdName");
 
 let p = 1;
 function check(x) {
@@ -33,7 +27,11 @@ function check(x) {
       button.style.backgroundColor = "#6a6a6a";
     }
   } else {
-    Swal.fire("Error", "You entered a number, higher than the possible dice sum!", "question");
+    Swal.fire(
+      "Error",
+      "You entered a number, higher than the possible dice sum!",
+      "question"
+    );
   }
 }
 function displayButton() {
@@ -55,6 +53,7 @@ function source(i) {
   sum += roll;
   let img = document.getElementById("img" + i);
   img.src = "assets/kocka" + roll + ".png";
+
   for (let i = 0; i < playerBets.length; i++) {
     if (playerBets[i] == sum) {
       winners[i] = 1;
@@ -104,9 +103,6 @@ function info() {
   });
 }
 function leaderboards() {
-  setTimeout(() => {
-    location.href = "index.html";
-  }, 6000);
   let p1w = parseInt(document.getElementById("nowg1").textContent);
   let p2w = parseInt(document.getElementById("nowg2").textContent);
   let p3w = parseInt(document.getElementById("nowg3").textContent);
@@ -120,12 +116,27 @@ function leaderboards() {
   pw.sort(function (a, b) {
     return a.value - b.value; // Sort by value in ascending order
   });
-  st.textContent = pw[2].name + ": " + pw[2].value;
-  nd.textContent = pw[1].name + ": " + pw[1].value;
-  rd.textContent = pw[0].name + ": " + pw[0].value;
-  leaderboard.style.display = "flex";
-  void leaderboard.clientHeight;
-  first.style.height = "80%";
+  document.getElementById("prvi").value = pw[0].name + " " + pw[0].value;
+  document.getElementById("drugi").value = pw[1].name + " " + pw[1].value;
+  document.getElementById("tretji").value = pw[2].name + " " + pw[2].value;
+}
+function leaderboardLoad() {
+  let st = document.getElementById("stName");
+  let nd = document.getElementById("ndName");
+  let rd = document.getElementById("rdName");
+  let first = document.getElementById("first");
+  let second = document.getElementById("second");
+  let third = document.getElementById("third");
+  let gold = document.getElementById("gold");
+  let silver = document.getElementById("silver");
+  let bronze = document.getElementById("bronze");
+  st.textContent = firstPlace;
+  nd.textContent = secondPlace;
+  rd.textContent = thirdPlace;
+  bronze.style.top = "154px";
+  gold.style.top = "13px";
+  silver.style.top = "60px";
+  first.style.height = "70%";
   second.style.height = "60%";
   third.style.height = "40%";
 }

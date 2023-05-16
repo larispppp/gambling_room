@@ -314,6 +314,8 @@ input:focus::placeholder {
   display: none;
   justify-content: center;
   align-items: center;
+}
+#leadSubmit {
   font-size: 16px;
   background-color: #80008075;
   padding: 13px;
@@ -327,11 +329,11 @@ input:focus::placeholder {
   cursor: pointer;
   pointer-events: auto;
 }
-#lead:hover {
+#leadSubmit:hover {
   background-color: #7201728d;
   transition: all 0.2s ease-in-out;
 }
-#lead:focus {
+#leadSubmit:focus {
   background-color: #5200528d;
   transition: all 0.2s ease-in-out;
 }
@@ -353,7 +355,6 @@ input:focus::placeholder {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
   z-index: 9999;
-  display: none;
 }
 #first {
   border-radius: 5px 5px 0px 0px;
@@ -363,7 +364,7 @@ input:focus::placeholder {
   -webkit-transition: height 2s ease;
   -moz-transition: height 2s ease;
   -o-transition: height 2s ease;
-  transition: height 2s ease;
+  transition: height 1.5s ease;
   background-color: #f1c11396;
 }
 #second {
@@ -386,7 +387,7 @@ input:focus::placeholder {
   -webkit-transition: height 2s ease;
   -moz-transition: height 2s ease;
   -o-transition: height 2s ease;
-  transition: height 2s ease;
+  transition: height 2.5s ease;
 }
 #rdName {
   margin-top: 10px;

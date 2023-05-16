@@ -6,7 +6,6 @@ $_SESSION['username3']  = $_POST['u3'];
 $nOfGames = $_POST['nOg'];
 $nOfDice = $_POST['nOd'];
 $maxBet = $nOfDice * 6;
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,7 @@ $maxBet = $nOfDice * 6;
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Craps</title>
 </head>
@@ -68,26 +68,20 @@ $maxBet = $nOfDice * 6;
           <input type="number" id="bet3" class="number" name="bet3" value="1" min="1" max="<?php echo $maxBet ?>" required />
         </div>
         <button class="lockIn" id="button3" onclick="check(3)">Lock In</button>
-        <span class="won">Won Bets: <span id="nowg3">0</span></span>
-
+        <span class="won">Won Bets: <span id="nowg3">0</span>
       </div>
 
     </div>
     <div id="bottom">
       <button id="rollButton" onclick="diceRoll()">Roll The Dice</button>
       <button id="reroll" onclick="init()">Reroll The Dice</button>
-      <button id="lead" onclick="leaderboards()">Leaderboards</button>
-    </div>
-  </div>
-  <div id="leaderboard">
-    <div id="third">
-      <div id=rdName>Hello </div>
-    </div>
-    <div id="first">
-      <div id=stName>asdasd</div>
-    </div>
-    <div id="second">
-      <div id=ndName>asdasddasdasd</div>
+
+      <form id="lead" method="post" action="leaderboard.php">
+        <input id="prvi" name="prvi" type="text" style="display:none">
+        <input id="drugi" name="drugi" type="text" style="display:none">
+        <input id="tretji" name="tretji" type="text" style="display:none">
+        <button id="leadSubmit" onclick="leaderboards()">Leaderboards</button>
+      </form>
     </div>
   </div>
   <script>

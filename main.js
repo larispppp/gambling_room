@@ -104,6 +104,9 @@ function info() {
   });
 }
 function leaderboards() {
+  setTimeout(() => {
+    location.href = "index.html";
+  }, 6000);
   let p1w = parseInt(document.getElementById("nowg1").textContent);
   let p2w = parseInt(document.getElementById("nowg2").textContent);
   let p3w = parseInt(document.getElementById("nowg3").textContent);

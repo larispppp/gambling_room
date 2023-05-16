@@ -105,8 +105,9 @@ input:focus::placeholder {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   text-align: center;
+  gap: 3%;
 }
 #nmbOfGames {
   background-color: #80008075;
